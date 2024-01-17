@@ -55,12 +55,16 @@ try {
     <title>Helyi levelezés beállítása a XAMPP-ban</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" integrity="sha512-72OVeAaPeV8n3BdZj7hOkaPSEk/uwpDkaGyP4W2jSzAC8tfiO4LMEDWoL3uFp5mcZu+8Eehb4GhZWFwvrss69Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js" integrity="sha512-Sct/LCTfkoqr7upmX9VZKEzXuRk5YulFoDTunGapYJdlCwA+Rl4RhgcPCLf7awTNLmIVrszTPNUFu4MSesep5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
 
 <body>
     <div class="container">
         <section>
+            <h1>Helyi levelezés beállítása a XAMPP-ban</h1>
+            <p>A XAMPP-ban található Mercury levelező szerver felhasználható az alkalmazásunk levelező funkciójának a tesztelésére.</p>
             <ol>
+                <li>Indítsuk el a Mercury levelező szerver szolgáltatást a XAMPP Control Panel-ben</li>
+                <li>Indítsuk el a Mercury levelező adminisztrációs felületét a XAMPP Control Panel-ben <a href="images/xamppControlPanel.png" target="_blank"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                 <li><code>Configuration -> Protocol Modules.../</code>-ban kapcsoljuk le a Mercury HTTP szerverét
                     <ul>
                         <li>Tiltsa le a "MercuryB HTTP webszerver" jelölőnégyzetet</li>
@@ -75,7 +79,7 @@ try {
                     <li>Állítsunk be mindenkinek jelszót</li>
                     <li>ha akarunk hozzunk létre új felhasználót</li>
                 </ul>
-                <li><code>Configuration -> MercuryS SMTPS Server</code>
+                <li><code>Configuration -> MercuryS SMTP Server</code>
                     <ul>
                         <li>General lapon -> "Announce myself as": localhost</li>
                         <li>"Listen on TCP/IP port" -> "25"</li>
@@ -91,7 +95,7 @@ try {
                 </li>
                 <li><code>File -> Send mail message...</code></li>
 
-            </ol> <p>Az postmaster@localhostisztrációs felüleleten látható a küldés, de az üzenet elolvasásához levelező kliensre van szükség. (pl.: <a href="https://www.pmail.com/downloads_s3_t.htm" target="_blank">Pegasus Mail</a>, <a href="https://www.thunderbird.net/hu/" target="_blank">Thunderbird</a></p>
+            </ol> <p>Az adminisztrációs felüleleten látható a küldés, de az üzenet elolvasásához levelező kliensre van szükség. (<i>pl.: <a href="https://www.pmail.com/downloads_s3_t.htm" target="_blank">Pegasus Mail</a> vagy <a href="https://www.thunderbird.net/hu/" target="_blank">Thunderbird</a> vagy ...</i>)</p>
         </section>
     </div>
 </body>
