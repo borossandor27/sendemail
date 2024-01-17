@@ -67,8 +67,7 @@ try {
                     </ul>
                 </li>
                 <li><code>Configuration -> Mercury Core Modul</code>-ban<ul>
-                        <li>"Internet name for this system : 127.0.0.1"</li>
-                        <li>"Administrator's email address : admin@localhost"</li>
+                        <li>"Internet name for this system : localhost"</li>
                     </ul>
                 </li>
                 <li><code>Configuration -> Manage local user...</code></li>
@@ -76,7 +75,7 @@ try {
                     <li>Állítsunk be mindenkinek jelszót</li>
                     <li>ha akarunk hozzunk létre új felhasználót</li>
                 </ul>
-                <li><code>Configuration -> MercuryS SMTP Server</code>
+                <li><code>Configuration -> MercuryS SMTPS Server</code>
                     <ul>
                         <li>General lapon -> "Announce myself as": localhost</li>
                         <li>"Listen on TCP/IP port" -> "25"</li>
@@ -87,6 +86,7 @@ try {
                     <ul>
                         <li>"Listen on TCP port" -> "110"</li>
                         <li>"IP interface to use" -> "127.0.0.1"</li>
+                        <li>Connection control lapon -> Add restriction to 127.0.0.1:127.0.0.1</li>
                     </ul>
                 </li>
                 <li><code>File -> Send mail message...</code></li>
